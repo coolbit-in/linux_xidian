@@ -1,18 +1,48 @@
-<html>
-<head>
-    <meta charset="UTF-8"/>
-    <title>test web</title>
-</head>
-<body>
-<table>
-    <tr>
-        <th>名称</th>
-        <th>状态</th>
-        <th>时间</th>
-        <th>空间</th>
-        <th>帮助</th>
-    </tr>
-    {% for item in distribution_list %}
+{% extends "base.html"%}
+{% block nav %}
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">XDLinux</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+{% endblock %}
+
+{% block table %}
+<div id="wrap">
+  <div class="container" style="padding-top: 50px;">
+    <center>
+      <h1>西电开源社区软件源</h1>
+    </center>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>名称</th>
+          <th>状态</th>
+          <th>最后同步时间</th>
+          <th>占用空间</th>
+          <th>帮助</th>
+        </tr>
+        {% for item in distribution_list %}
+        <tr id="name" class="alert alert-success">
+        <tr id="name" class="alert alert-warning">
+        <tr id="name" class="alert alert-danger">
+>>>>>>> bb4a9108a34287661704d94284b146439c8b52c5
         <tr>
             <td>{{ item.name }}</td>
             <td>{{ item.status }}</td>
@@ -20,7 +50,18 @@
             <td>{{ item.size }}</td>
             <td>{{ item.help_link }}</td>
         </tr>
-    {% endfor %}
-</table>
-</body>
-</html>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div id="footer">
+  <div class="container">
+    <p class="text-muted credit center-block">西电开源社区
+    <address>coolbit.in@gmail.com</address></p>
+  </div>
+</div>
+{% endblock %}
