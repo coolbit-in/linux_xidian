@@ -37,6 +37,7 @@ TIME_ZONE = 'Asia/Shanghai'
 LANGUAGE_CODE = 'zh-cn'
 
 SITE_ID = 1
+from django.views.static import serve
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.

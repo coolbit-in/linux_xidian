@@ -10,6 +10,7 @@
         <th>状态</th>
         <th>时间</th>
         <th>空间</th>
+        <th>帮助</th>
     </tr>
     {% for item in distribution_list %}
         <tr>
@@ -17,6 +18,7 @@
             <td>{{ item.status }}</td>
             <td>{{ item.last_rsync_time }}</td>
             <td>{{ item.size }}</td>
+            <td>{{ item.help_link }}</td>
         </tr>
     {% endfor %}
 </table>

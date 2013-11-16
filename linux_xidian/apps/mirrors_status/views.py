@@ -39,7 +39,7 @@ class Distribution():
         self.size = size
         translate_to_chinese_dict = {'busy': '正在同步', 'success': '同步成功', 'fail': '同步失败'}
         self.status = translate_to_chinese_dict[self.status]
-
+        self.help_link = 'help/{0}'.format(self.name)
 
 def show_mirrors_status(request):
     parser = StatusFileParser('/srv/log_new/status.log')
