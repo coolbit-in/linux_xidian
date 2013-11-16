@@ -7,6 +7,7 @@ from apps.mirrors_status.views import *
 
 urlpatterns = patterns('',
     # Examples:
+    url(r'^mirrors/', show_mirrors_status)
     # url(r'^$', 'linux_xidian.views.home', name='home'),
     # url(r'^linux_xidian/', include('linux_xidian.foo.urls')),
 

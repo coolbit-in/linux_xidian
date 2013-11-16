@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>test web</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>名称</th>
+        <th>状态</th>
+        <th>时间</th>
+        <th>空间</th>
+    </tr>
+    {% for item in distribution_list %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.status }}</td>
+            <td>{{ item.last_rsync_time }}</td>
+            <td>{{ item.size }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
