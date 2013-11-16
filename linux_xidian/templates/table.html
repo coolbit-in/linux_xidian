@@ -1,0 +1,30 @@
+{% extends "index.html"%}
+<div id="wrap">
+  <div class="container" style="padding-top: 50px;">
+    <center>
+      <h1>西电开源社区软件源</h1>
+    </center>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>名称</th>
+          <th>状态</th>
+          <th>最后同步时间</th>
+          <th>占用空间</th>
+          <th>帮助</th>
+        </tr>
+        {% for item in distribution_list %}
+        <tr id="name" class="alert alert-success">
+        <tr id="name" class="alert alert-warning">
+        <tr id="name" class="alert alert-danger">
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.status }}</td>
+            <td>{{ item.last_rsync_time }}</td>
+            <td>{{ item.size }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
