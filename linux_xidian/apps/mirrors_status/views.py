@@ -1,8 +1,9 @@
 # coding:utf-8
+import re
+import os
 from django.http import HttpResponse
 from django.template import Context
 from django.template.loader import get_template
-import re
 class StatusFileParser():
     '''
     print match_list
@@ -47,6 +48,24 @@ def show_mirrors_status(request):
     distribution_list = parser.distribution_list
     html_template = get_template('index.html')
     html_context = Context({'distribution_list': distribution_list})
-    html  = html_template.render(html_context)
+    html = html_template.render(html_context)
     return HttpResponse(html)
+
+def show_mirrors_help(request, name):
+    name = str(name)
+    html_file = os.path.join(os.path.dirname(__file__), 'help/{0}.html'.format(name))
+    try:
+        with open(html_file, 'r') as file_handle:
+            html_content = file_handle.read()
+    except IOError:
+        html_content = 'Not Found!'
+
+    html_template = get_template('help_framework.html')
+    html_context = Context({'distribution_name': name, 'help_content': html_content})
+    html = html_template.render(html_context)
+    return HttpResponse(html)
+
+
+
+
 
