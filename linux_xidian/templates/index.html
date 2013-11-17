@@ -23,6 +23,7 @@
             <td>{{ item.status }}</td>
             <td>{{ item.last_rsync_time }}</td>
             <td>{{ item.size }}</td>
+            <td>{{ item.help_link }}</td>
         </tr>
       {% endfor %}
       </tbody>
@@ -34,3 +35,4 @@
 {% block footer %}
   {% include 'footer.html' %}
 {% endblock %}
+

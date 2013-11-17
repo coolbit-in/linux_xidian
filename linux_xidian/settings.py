@@ -62,7 +62,9 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = '/home/lanhao34/linux_xidian/linux_xidian/templates/'
+#STATIC_ROOT = '/home/lanhao34/linux_xidian/linux_xidian/templates/'
+#STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'templates')
+
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -116,7 +118,8 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     #template_dir_path,
     #'/Users/liusenyuan/computer/python/linux_xidian/linux_xidian/templates'
-    '/home/lanhao34/linux_xidian/linux_xidian/templates'
+    #'/home/lanhao34/linux_xidian/linux_xidian/templates',
+    os.path.join(os.path.dirname(__file__), 'templates'),
 )
 
 INSTALLED_APPS = (

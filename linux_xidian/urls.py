@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from apps.mirrors_status.views import *
+#from apps.mirrors_status.views import *
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
