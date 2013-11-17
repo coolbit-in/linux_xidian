@@ -63,7 +63,7 @@ MEDIA_URL = ''
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
 #STATIC_ROOT = '/home/lanhao34/linux_xidian/linux_xidian/templates/'
-STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'templates')
+#STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'templates')
 
 
 # URL prefix for static files.
