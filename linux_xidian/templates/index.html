@@ -21,7 +21,7 @@
         </tr>  
       {% for item in distribution_list %}
         <tr class="{{ item.class_type }}">
-            <td>{{ item.name }}</td>
+            <td><a href="ftp://linux.xidian.edu.cn/{{ item.name }}">{{ item.name }}</a></td>
             <td>{{ item.status }}</td>
             <td>{{ item.last_rsync_time }}</td>
             <td>{{ item.size }}</td>
