@@ -4,10 +4,6 @@
   <title>西电开源社区软件源</title>
 {% endblock %}
 
-{% block nav %}
-  {% include 'nav.html' %}
-{% endblock %}
-
 {% block body %}
 <div id="wrap">
   <div class="container" style="padding-top: 50px;">
@@ -29,16 +25,14 @@
             <td>{{ item.status }}</td>
             <td>{{ item.last_rsync_time }}</td>
             <td>{{ item.size }}</td>
-            <td>{{ item.help_link }}</td>
+            <td>
+                <a herf="{{item.help_link}}" class="glyphicon glyphicon-bookmark" style="margin-left:6px"></a>
+            </td>
         </tr>
       {% endfor %}
       </tbody>
     </table>
   </div>
 </div>
-{% endblock %}
-
-{% block footer %}
-  {% include 'footer.html' %}
 {% endblock %}
 
