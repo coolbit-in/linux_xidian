@@ -1,8 +1,8 @@
 {% load static %} 
-{% load staticfiles %}
 <!DOCTYPE html>
 <html>
   <head>
+    {% block title %}{% endblock %}
     <title>西电开源社区软件源</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -18,10 +18,10 @@
   </head>
   <body>
   {% block nav %}{% endblock %}
-  {% block table %}{% endblock %}
+  {% block body %}{% endblock %}
   {% block footer %}{% endblock %}
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/static/js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/static/js/bootstrap.min.js"></script>
   </body>
