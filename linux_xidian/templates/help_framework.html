@@ -11,7 +11,9 @@
       <h1>使用帮助-西电开源社区软件源</h1>
     </center>
     <h2>{{ distribution_name }}</h2>
+    {% autoescape off %}
     {{ help_content }}
+    {% endautoescape %}
   </div>
 </div>
 {% endblock %}
