@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^mirrors/$', 'linux_xidian.apps.mirrors_status.views.show_mirrors_status'),
     url(r'^help/(\w+)/$', 'linux_xidian.apps.mirrors_status.views.show_mirrors_help'),
+    url(r'^static/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.STATIC_ROOT})
     # url(r'^$', 'linux_xidian.views.home', name='home'),
     # url(r'^linux_xidian/', include('linux_xidian.foo.urls')),
 
